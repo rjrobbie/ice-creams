@@ -1,38 +1,67 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+:root {
+  --background-image: url('https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80');
+}
+
+body {
+  background: var(--background-image) no-repeat center center fixed;
+  padding-top: 15px;
+  background-size: cover;
+  font-family: 'Limelight', cursive;
+  color: rgb(104, 0, 55);
+}
+
+.item {
+  margin: 0 0 10px;
+  position: relative;
+}
+
+.box h2 {
+  margin: 0;
+  font-size: 80px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+html {
+  padding: 0 20px; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.img {
+  box-sizing: border-box;
+  width: 100% !important;
+  height: auto !important;
+  border: 5px solid rgb(104, 0, 55);
+  border-radius: 5px;
+}    
+
+.caption {
+  display: none;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+}
+
+.caption a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.item:hover .caption {
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid {
+ column-count: 3;
 }
+
